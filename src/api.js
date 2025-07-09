@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:3001/api' });
+const API = axios.create({ baseURL: 'https://krama-back.onrender.com/api' });
 
 export const fetchRecent = (type = 'drama') => API.get(`/recent?type=${type}`);
 export const searchContent = (q) => API.get(`/search?q=${q}`);
