@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+  font-family: 'Segoe UI', sans-serif;
+}
+iframe {
+  pointer-events: auto !important;
+}
+
+/* Hide popup layers */
+iframe + div,
+iframe ~ *[style*="z-index"],
+iframe ~ .adsbox,
+iframe ~ .overlay {
+  display: none !important;
+  pointer-events: none !important;
+}
